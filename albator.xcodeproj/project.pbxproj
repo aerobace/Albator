@@ -7,21 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E91571F742F8FC2E974A66A /* Pods_albator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F436CCCDCB350E11BC6E46E9 /* Pods_albator.framework */; };
 		BF5D4E8C1FDB1532002A53D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5D4E8B1FDB1532002A53D5 /* AppDelegate.swift */; };
-		BF5D4E8E1FDB1532002A53D5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5D4E8D1FDB1532002A53D5 /* ViewController.swift */; };
+		BF5D4E8E1FDB1532002A53D5 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5D4E8D1FDB1532002A53D5 /* SignInVC.swift */; };
 		BF5D4E911FDB1532002A53D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5D4E8F1FDB1532002A53D5 /* Main.storyboard */; };
 		BF5D4E931FDB1532002A53D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5D4E921FDB1532002A53D5 /* Assets.xcassets */; };
 		BF5D4E961FDB1532002A53D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5D4E941FDB1532002A53D5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C6480CA90DEA8317891A7A6 /* Pods-albator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-albator.release.xcconfig"; path = "Pods/Target Support Files/Pods-albator/Pods-albator.release.xcconfig"; sourceTree = "<group>"; };
+		AC15D811B89DA2E16DF65465 /* Pods-albator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-albator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-albator/Pods-albator.debug.xcconfig"; sourceTree = "<group>"; };
 		BF5D4E881FDB1532002A53D5 /* albator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = albator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5D4E8B1FDB1532002A53D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BF5D4E8D1FDB1532002A53D5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BF5D4E8D1FDB1532002A53D5 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		BF5D4E901FDB1532002A53D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BF5D4E921FDB1532002A53D5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF5D4E951FDB1532002A53D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF5D4E971FDB1532002A53D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF5D4E9D1FEA3B9C002A53D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F436CCCDCB350E11BC6E46E9 /* Pods_albator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_albator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +34,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E91571F742F8FC2E974A66A /* Pods_albator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D7C5889063330A398B620C2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AC15D811B89DA2E16DF65465 /* Pods-albator.debug.xcconfig */,
+				8C6480CA90DEA8317891A7A6 /* Pods-albator.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4CC8147A93086EFFD45CC126 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F436CCCDCB350E11BC6E46E9 /* Pods_albator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BF5D4E7F1FDB1532002A53D5 = {
 			isa = PBXGroup;
 			children = (
 				BF5D4E8A1FDB1532002A53D5 /* albator */,
 				BF5D4E891FDB1532002A53D5 /* Products */,
+				0D7C5889063330A398B620C2 /* Pods */,
+				4CC8147A93086EFFD45CC126 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +79,39 @@
 		BF5D4E8A1FDB1532002A53D5 /* albator */ = {
 			isa = PBXGroup;
 			children = (
+				BF8752D51FEA40B0002146D1 /* Model */,
+				BF8752D71FEA40BF002146D1 /* View */,
+				BF8752D81FEA40FB002146D1 /* Controller */,
 				BF5D4E8B1FDB1532002A53D5 /* AppDelegate.swift */,
-				BF5D4E8D1FDB1532002A53D5 /* ViewController.swift */,
 				BF5D4E8F1FDB1532002A53D5 /* Main.storyboard */,
 				BF5D4E921FDB1532002A53D5 /* Assets.xcassets */,
 				BF5D4E941FDB1532002A53D5 /* LaunchScreen.storyboard */,
 				BF5D4E971FDB1532002A53D5 /* Info.plist */,
+				BF5D4E9D1FEA3B9C002A53D5 /* GoogleService-Info.plist */,
 			);
 			path = albator;
+			sourceTree = "<group>";
+		};
+		BF8752D51FEA40B0002146D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF8752D71FEA40BF002146D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF8752D81FEA40FB002146D1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF5D4E8D1FDB1532002A53D5 /* SignInVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +121,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF5D4E9A1FDB1532002A53D5 /* Build configuration list for PBXNativeTarget "albator" */;
 			buildPhases = (
+				7332339F18F9DFF3ABED243D /* [CP] Check Pods Manifest.lock */,
 				BF5D4E841FDB1532002A53D5 /* Sources */,
 				BF5D4E851FDB1532002A53D5 /* Frameworks */,
 				BF5D4E861FDB1532002A53D5 /* Resources */,
+				DEB4D63ADD6F82B8C7BF2336 /* [CP] Embed Pods Frameworks */,
+				F8C1FAFDA91DCD1F6F0D631B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,12 +184,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7332339F18F9DFF3ABED243D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-albator-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEB4D63ADD6F82B8C7BF2336 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-albator/Pods-albator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8C1FAFDA91DCD1F6F0D631B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-albator/Pods-albator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BF5D4E841FDB1532002A53D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF5D4E8E1FDB1532002A53D5 /* ViewController.swift in Sources */,
+				BF5D4E8E1FDB1532002A53D5 /* SignInVC.swift in Sources */,
 				BF5D4E8C1FDB1532002A53D5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,9 +376,11 @@
 		};
 		BF5D4E9B1FDB1532002A53D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC15D811B89DA2E16DF65465 /* Pods-albator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6KTYTHBVCR;
 				INFOPLIST_FILE = albator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aerobace.albator;
@@ -286,9 +392,11 @@
 		};
 		BF5D4E9C1FDB1532002A53D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C6480CA90DEA8317891A7A6 /* Pods-albator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6KTYTHBVCR;
 				INFOPLIST_FILE = albator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aerobace.albator;
