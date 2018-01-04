@@ -13,6 +13,7 @@
 		BF5D4E911FDB1532002A53D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5D4E8F1FDB1532002A53D5 /* Main.storyboard */; };
 		BF5D4E931FDB1532002A53D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5D4E921FDB1532002A53D5 /* Assets.xcassets */; };
 		BF5D4E961FDB1532002A53D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5D4E941FDB1532002A53D5 /* LaunchScreen.storyboard */; };
+		BF678F061FFE895E0043862A /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF678F051FFE895E0043862A /* FeedVC.swift */; };
 		BFA3283B1FFB5DBC003EB46C /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3283A1FFB5DBC003EB46C /* FancyView.swift */; };
 		BFA3283F1FFB5EF8003EB46C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3283E1FFB5EF8003EB46C /* Constants.swift */; };
 		BFA328401FFB620D003EB46C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF5D4E9D1FEA3B9C002A53D5 /* GoogleService-Info.plist */; };
@@ -32,6 +33,7 @@
 		BF5D4E951FDB1532002A53D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF5D4E971FDB1532002A53D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF5D4E9D1FEA3B9C002A53D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BF678F051FFE895E0043862A /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		BFA3283A1FFB5DBC003EB46C /* FancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		BFA3283E1FFB5EF8003EB46C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BFA328411FFB626D003EB46C /* RoundBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				BF5D4E8D1FDB1532002A53D5 /* SignInVC.swift */,
+				BF678F051FFE895E0043862A /* FeedVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -238,12 +241,14 @@
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -276,6 +281,7 @@
 				BF5D4E8E1FDB1532002A53D5 /* SignInVC.swift in Sources */,
 				BFA328421FFB626D003EB46C /* RoundBtn.swift in Sources */,
 				BF5D4E8C1FDB1532002A53D5 /* AppDelegate.swift in Sources */,
+				BF678F061FFE895E0043862A /* FeedVC.swift in Sources */,
 				BFA3283B1FFB5DBC003EB46C /* FancyView.swift in Sources */,
 				BFA3283F1FFB5EF8003EB46C /* Constants.swift in Sources */,
 				BFA328461FFB65A8003EB46C /* FancyBtn.swift in Sources */,
