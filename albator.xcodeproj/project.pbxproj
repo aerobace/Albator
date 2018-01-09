@@ -14,6 +14,9 @@
 		BF5D4E931FDB1532002A53D5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF5D4E921FDB1532002A53D5 /* Assets.xcassets */; };
 		BF5D4E961FDB1532002A53D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5D4E941FDB1532002A53D5 /* LaunchScreen.storyboard */; };
 		BF678F061FFE895E0043862A /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF678F051FFE895E0043862A /* FeedVC.swift */; };
+		BF678F082003B71C0043862A /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF678F072003B71C0043862A /* CircleView.swift */; };
+		BF883012200496C40040E58D /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF883011200496C40040E58D /* PostCell.swift */; };
+		BF88301520052C4C0040E58D /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF88301420052C4C0040E58D /* DataService.swift */; };
 		BFA3283B1FFB5DBC003EB46C /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3283A1FFB5DBC003EB46C /* FancyView.swift */; };
 		BFA3283F1FFB5EF8003EB46C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA3283E1FFB5EF8003EB46C /* Constants.swift */; };
 		BFA328401FFB620D003EB46C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF5D4E9D1FEA3B9C002A53D5 /* GoogleService-Info.plist */; };
@@ -34,6 +37,9 @@
 		BF5D4E971FDB1532002A53D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF5D4E9D1FEA3B9C002A53D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF678F051FFE895E0043862A /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		BF678F072003B71C0043862A /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		BF883011200496C40040E58D /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		BF88301420052C4C0040E58D /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		BFA3283A1FFB5DBC003EB46C /* FancyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
 		BFA3283E1FFB5EF8003EB46C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BFA328411FFB626D003EB46C /* RoundBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
@@ -92,6 +98,7 @@
 		BF5D4E8A1FDB1532002A53D5 /* albator */ = {
 			isa = PBXGroup;
 			children = (
+				BF88301320052C1D0040E58D /* Services */,
 				BFA3283D1FFB5ECA003EB46C /* Utils */,
 				BF8752D51FEA40B0002146D1 /* Model */,
 				BF8752D71FEA40BF002146D1 /* View */,
@@ -120,6 +127,8 @@
 				BFA328411FFB626D003EB46C /* RoundBtn.swift */,
 				BFA328431FFB645E003EB46C /* FancyField.swift */,
 				BFA328451FFB65A8003EB46C /* FancyBtn.swift */,
+				BF678F072003B71C0043862A /* CircleView.swift */,
+				BF883011200496C40040E58D /* PostCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -131,6 +140,14 @@
 				BF678F051FFE895E0043862A /* FeedVC.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		BF88301320052C1D0040E58D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BF88301420052C4C0040E58D /* DataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		BFA3283D1FFB5ECA003EB46C /* Utils */ = {
@@ -277,14 +294,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF678F082003B71C0043862A /* CircleView.swift in Sources */,
 				BFA328441FFB645E003EB46C /* FancyField.swift in Sources */,
 				BF5D4E8E1FDB1532002A53D5 /* SignInVC.swift in Sources */,
 				BFA328421FFB626D003EB46C /* RoundBtn.swift in Sources */,
 				BF5D4E8C1FDB1532002A53D5 /* AppDelegate.swift in Sources */,
+				BF88301520052C4C0040E58D /* DataService.swift in Sources */,
 				BF678F061FFE895E0043862A /* FeedVC.swift in Sources */,
 				BFA3283B1FFB5DBC003EB46C /* FancyView.swift in Sources */,
 				BFA3283F1FFB5EF8003EB46C /* Constants.swift in Sources */,
 				BFA328461FFB65A8003EB46C /* FancyBtn.swift in Sources */,
+				BF883012200496C40040E58D /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
