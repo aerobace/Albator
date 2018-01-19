@@ -18,7 +18,6 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
-    static var imageCache: NSCache<NSString, UIImage> = NSCache()
     var imageSelected = false
     
     override func viewDidLoad() {
@@ -32,16 +31,18 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         DataService.ds.REF_POSTS.observe(.value) { (snapshot) in
             self.posts = []
-            if let snapshots = snapshot.children.allObjects as? [FIRDataSnapshot] {
-                for snap in snapshots as [FIRDataSnapshot] {
+            if let snapshots = snapshot.children.allObjects as? [DataSnapshot] {
+                for snap in snapshots as [DataSnapshot] {
                     print("SNAP: \(snap)")
                     if let postDict = snap.value as? Dictionary<String, AnyObject> {
                         let key = snap.key
-                        let post = Post(postKey: key, postData: postDict)
+                        let userID = DataService.ds.REF_USER_CURRENT.key
+                        let post = Post(postKey: key, userKey: userID, postData: postDict)
                         self.posts.append(post)
                     }
                 }
             }
+            self.posts.reverse()
             self.tableView.reloadData()
         }
     }
@@ -59,11 +60,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         let post = posts[indexPath.row]
         
         if let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell") as? PostCell {
-            if let img = FeedVC.imageCache.object(forKey: post.imageURL as NSString) {
-                cell.configureCell(post: post, img: img)
-            } else {
-                cell.configureCell(post: post)
-            }
+            cell.configureCell(post: post)
             return cell
         } else {
             return PostCell()
@@ -96,10 +93,10 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         
         if let imgData = UIImageJPEGRepresentation(img, 0.2) {
             let imgUid = NSUUID().uuidString
-            let metadata = FIRStorageMetadata()
+            let metadata = StorageMetadata()
             metadata.contentType = "image/jpeg"
             
-            DataService.ds.REF_POST_IMAGES.child(imgUid).put(imgData, metadata: metadata) { (metadata, error) in
+            DataService.ds.REF_POST_IMAGES.child(imgUid).putData(imgData, metadata: metadata) { (metadata, error) in
                 if error != nil {
                     print("Vince: Unable to upload image to Firebase storage")
                 } else {
@@ -117,6 +114,8 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
         let post: Dictionary<String, AnyObject> = [
             "caption": captionField.text! as AnyObject,
             "imageURL": imageUrl as AnyObject,
+            "userKey": DataService.ds.REF_USER_CURRENT.key as AnyObject,
+            "profileURL": User.myUser.imageURL as AnyObject,
             "likes": 0 as AnyObject
         ]
         
@@ -133,7 +132,7 @@ class FeedVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UIIm
     @IBAction func signOutTapped(_ sender: Any) {
         let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)
         print("Vince: ID removed from keychain \(keychainResult)")
-        try! FIRAuth.auth()?.signOut()
+        try! Auth.auth().signOut()
         performSegue(withIdentifier: "goToSignIn", sender: nil)
     }
     

@@ -12,5 +12,10 @@ target 'albator' do
   pod 'Firebase/Storage'
   pod 'FBSDKLoginKit'
   pod 'SwiftKeychainWrapper'
+  
+  pod 'TweeTextField'
+  pod 'EasySocialButton'
+  pod 'Kingfisher'
+  pod 'FAPanels'
 
 end

@@ -24,6 +24,8 @@
 		BFA328421FFB626D003EB46C /* RoundBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA328411FFB626D003EB46C /* RoundBtn.swift */; };
 		BFA328441FFB645E003EB46C /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA328431FFB645E003EB46C /* FancyField.swift */; };
 		BFA328461FFB65A8003EB46C /* FancyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA328451FFB65A8003EB46C /* FancyBtn.swift */; };
+		BFE20549200FC98A00B9ECC3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE20548200FC98A00B9ECC3 /* User.swift */; };
+		BFE2054B2011ECAD00B9ECC3 /* ClassExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE2054A2011ECAD00B9ECC3 /* ClassExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		BFA328411FFB626D003EB46C /* RoundBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBtn.swift; sourceTree = "<group>"; };
 		BFA328431FFB645E003EB46C /* FancyField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		BFA328451FFB65A8003EB46C /* FancyBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FancyBtn.swift; sourceTree = "<group>"; };
+		BFE20548200FC98A00B9ECC3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BFE2054A2011ECAD00B9ECC3 /* ClassExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassExtension.swift; sourceTree = "<group>"; };
 		F436CCCDCB350E11BC6E46E9 /* Pods_albator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_albator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -119,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				BF88301620062C940040E58D /* Post.swift */,
+				BFE20548200FC98A00B9ECC3 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				BFA3283E1FFB5EF8003EB46C /* Constants.swift */,
+				BFE2054A2011ECAD00B9ECC3 /* ClassExtension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -259,16 +265,32 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-albator/Pods-albator-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/EasySocialButton/EasySocialButton.framework",
+				"${BUILT_PRODUCTS_DIR}/FAPanels/FAPanels.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftKeychainWrapper/SwiftKeychainWrapper.framework",
+				"${BUILT_PRODUCTS_DIR}/TweeTextField/TweeTextField.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasySocialButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FAPanels.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftKeychainWrapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TweeTextField.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -297,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFE20549200FC98A00B9ECC3 /* User.swift in Sources */,
 				BF678F082003B71C0043862A /* CircleView.swift in Sources */,
 				BFA328441FFB645E003EB46C /* FancyField.swift in Sources */,
 				BF5D4E8E1FDB1532002A53D5 /* SignInVC.swift in Sources */,
@@ -308,6 +331,7 @@
 				BFA3283B1FFB5DBC003EB46C /* FancyView.swift in Sources */,
 				BFA3283F1FFB5EF8003EB46C /* Constants.swift in Sources */,
 				BFA328461FFB65A8003EB46C /* FancyBtn.swift in Sources */,
+				BFE2054B2011ECAD00B9ECC3 /* ClassExtension.swift in Sources */,
 				BF883012200496C40040E58D /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

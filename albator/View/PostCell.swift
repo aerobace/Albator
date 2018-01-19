@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Kingfisher
 
 class PostCell: UITableViewCell {
 
@@ -19,7 +20,7 @@ class PostCell: UITableViewCell {
     @IBOutlet weak var likeImg: UIImageView!
 
     var post: Post!
-    var likesRef: FIRDatabaseReference!
+    var likesRef: DatabaseReference!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,30 +31,22 @@ class PostCell: UITableViewCell {
         likeImg.isUserInteractionEnabled = true
     }
 
-    func configureCell(post: Post, img: UIImage? = nil) {
+    func configureCell(post: Post) {
         self.post = post
         likesRef = DataService.ds.REF_USER_CURRENT.child("likes").child(post.postKey)
         
+        DataService.ds.REF_USER_CURRENT.child("displayName").observe(.value, with: { (snapshot) in
+            let username = snapshot.value as? String
+            self.usernameLbl.text = username
+        })
         self.caption.text = post.caption
         self.likesLbl.text = "\(post.likes)"
         
-        if img != nil {
-            self.postImg.image = img
-        } else {
-            let ref = FIRStorage.storage().reference(forURL: post.imageURL)
-            ref.data(withMaxSize: 2*1024*1024, completion: {(data, error) in
-                if error != nil {
-                    print("Vince: Unable to download image from Firebase storage")
-                } else {
-                    print("Vince: Image downloaded from Firebase storage")
-                    if let imgData = data {
-                        if let img = UIImage(data: imgData) {
-                            self.postImg.image = img
-                            FeedVC.imageCache.setObject(img, forKey: post.imageURL as NSString)
-                        }
-                    }
-                }
-            })
+        let urlImage = URL(string: post.imageURL)
+        self.postImg.kf.setImage(with: urlImage)
+        if post.profileURL != "" {
+            let urlProfile = URL(string: post.profileURL)
+            self.profileImg.kf.setImage(with: urlProfile)
         }
         
         likesRef.observeSingleEvent(of: .value) { (snapshot) in
